@@ -7,10 +7,6 @@ A Laravel 11 package that simplifies integration with the OpenStreetMap Nominati
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Usage](#usage)
-- [Example Methods](#example-methods)
-- [Testing](#testing)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
