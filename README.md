@@ -1,6 +1,6 @@
 # Kriosmane/OpenStreetMap
 
-A Laravel 11 package that simplifies integration with the OpenStreetMap Nominatim API to fetch coordinates, address details, and more.
+A Laravel  package that simplifies integration with the OpenStreetMap Nominatim API to fetch coordinates, address details, and more.
 
 ## Table of Contents
 
