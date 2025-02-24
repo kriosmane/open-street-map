@@ -1,0 +1,29 @@
+{
+    "name": "kriosmane/open-street-map",
+    "description": "Package for integrate OpenStreetMap in Laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kriosmane\\OpenStreetMap\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Krios Mane",
+            "email": "krios.mane@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kriosmane\\OpenStreetMap\\Providers\\OpenStreetMapServiceProvider"
+            ],
+            "aliases": {
+                "OpenStreetMap": "Kriosmane\\OpenStreetMap\\Facades\\OpenStreetMap"
+            }
+        }
+    }
+}
