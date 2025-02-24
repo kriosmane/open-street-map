@@ -25,7 +25,7 @@ class OpenStreetMapServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Unisci il file di configurazione del pacchetto con quello dell'app
+        // Merge the package configuration file with the application's configuration
         $this->mergeConfigFrom(__DIR__.'/../../config/open-street-map.php', 'open-street-map');
 
         // Registra la classe nel Service Container
