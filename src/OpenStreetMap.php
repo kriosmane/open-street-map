@@ -3,6 +3,7 @@
 namespace Kriosmane\OpenStreetMap;
 
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class OpenStreetMap
 {
@@ -52,17 +53,28 @@ class OpenStreetMap
             // If the request is successful, parse the JSON response
             if ($response->successful()) {
                 $results = $response->json(); // This will be an array of results
+                //dd($results);
                 if (!empty($results) && isset($results[0]['lat'], $results[0]['lon'])) {
                     return [
                         'lat' => (float)$results[0]['lat'],
                         'lon' => (float)$results[0]['lon'],
                     ];
                 }
+            }else{
+                Log::warning('OpenStreetMap API request failed', [
+                    'status' => $response->status(),
+                    'body'   => $response->body(),
+                ]);
+                return null;
             }
+
         } catch (\Exception $e) {
             // Basic error handling
             // Could log, re-throw, or simply return null
-            echo $e->getMessage();
+            Log::error('OpenStreetMap API request failed', [
+                'error' => $e->getMessage(),
+                'address' => $address,
+            ]);
             return null;
         }
 
