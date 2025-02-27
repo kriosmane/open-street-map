@@ -1,3 +1,6 @@
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/kriosmane/open-street-map.svg?style=flat-square)](https://packagist.org/packages/kriosmane/open-street-map)
+[![Total Downloads](https://img.shields.io/packagist/dt/kriosmane/open-street-map.svg?style=flat-square)](https://packagist.org/packages/kriosmane/open-street-map)
+
 # Kriosmane/OpenStreetMap
 
 A Laravel  package that simplifies integration with the OpenStreetMap Nominatim API to fetch coordinates, address details, and more.
