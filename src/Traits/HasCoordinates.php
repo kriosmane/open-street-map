@@ -123,14 +123,16 @@ trait HasCoordinates
      * @param  string  $address
      * @return $this
      */
-    public function setCoordinatesFromAddress(string $address): self
+    public function setCoordinatesFromAddress(string $address): bool
     {
         $coords = OpenStreetMap::getCoordinates($address);
 
         if (!empty($coords)) {
             $this->setCoordinates($coords['lat'], $coords['lon']);
+
+            return true;
         }
 
-        return $this;
+        return false;
     }
 }
